@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIProfitTools - AI Tools & Digital Products for Creators</title>
+    <meta name="description" content="Boost your productivity with AI-powered tools, ChatGPT prompts, Midjourney prompts, resume templates, and digital products for freelancers and entrepreneurs.">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>AIProfitTools</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Supercharge Your Business with AI-Powered Tools & Templates</h1>
+            <p class="hero-subtitle">Get instant access to expert-crafted ChatGPT prompts, Midjourney art prompts, professional resume templates, and productivity kits designed for freelancers, entrepreneurs, and students.</p>
+            <div class="hero-buttons">
+                <button class="cta-primary" onclick="scrollToSection('products')">Explore Products</button>
+                <button class="cta-secondary" onclick="scrollToSection('prompt-builder')">Try Prompt Builder</button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>10,000+</h3>
+                    <p>Happy Users</p>
+                </div>
+                <div class="stat">
+                    <h3>500+</h3>
+                    <p>AI Prompts</p>
+                </div>
+                <div class="stat">
+                    <h3>50+</h3>
+                    <p>Templates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose AIProfitTools?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Expert-Crafted AI Prompts</h3>
+                    <p>Save hours with proven ChatGPT and Midjourney prompts tested by professionals</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Downloads</h3>
+                    <p>Get immediate access to all products after purchase - no waiting</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Niche-Specific Tools</h3>
+                    <p>Tailored for freelancers, business owners, and students' unique needs</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Lifetime Updates</h3>
+                    <p>Free updates and new prompts added regularly to keep you ahead</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prompt Builder Section -->
+    <section id="prompt-builder" class="prompt-builder">
+        <div class="container">
+            <h2>AI Prompt Builder</h2>
+            <p>Generate custom prompts tailored to your specific needs</p>
+            
+            <div class="builder-form">
+                <div class="form-group">
+                    <label for="role">Your Role:</label>
+                    <select id="role">
+                        <option value="">Select your role...</option>
+                        <option value="marketer">Marketer</option>
+                        <option value="freelancer">Freelancer</option>
+                        <option value="designer">Designer</option>
+                        <option value="entrepreneur">Entrepreneur</option>
+                        <option value="student">Student</option>
+                        <option value="writer">Writer</option>
+                        <option value="consultant">Consultant</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="goal">Your Goal:</label>
+                    <select id="goal">
+                        <option value="">Select your goal...</option>
+                        <option value="write a cold email">Write a cold email</option>
+                        <option value="create a social media post">Create a social media post</option>
+                        <option value="develop a business strategy">Develop a business strategy</option>
+                        <option value="write compelling copy">Write compelling copy</option>
+                        <option value="create a presentation">Create a presentation</option>
+                        <option value="plan a marketing campaign">Plan a marketing campaign</option>
+                        <option value="generate content ideas">Generate content ideas</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="topic">Topic/Industry:</label>
+                    <select id="topic">
+                        <option value="">Select topic...</option>
+                        <option value="digital marketing">Digital marketing</option>
+                        <option value="fitness">Fitness</option>
+                        <option value="productivity">Productivity</option>
+                        <option value="e-commerce">E-commerce</option>
+                        <option value="technology">Technology</option>
+                        <option value="finance">Finance</option>
+                        <option value="health">Health</option>
+                        <option value="education">Education</option>
+                    </select>
+                </div>
+                
+                <button onclick="generatePrompt()" class="generate-btn">Generate Prompt</button>
+                
+                <div id="generated-prompt" class="prompt-output" style="display: none;">
+                    <h4>Your Custom Prompt:</h4>
+                    <div class="prompt-text" id="prompt-text"></div>
+                    <div class="prompt-actions">
+                        <button onclick="copyPrompt()" class="copy-btn">Copy Prompt</button>
+                        <a href="https://chat.openai.com" target="_blank" class="try-btn">Try Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            
+            <!-- Featured Product -->
+            <div class="featured-product">
+                <div class="product-content">
+                    <div class="product-info">
+                        <h3>30 ChatGPT Prompts to Grow Your Freelance Business</h3>
+                        <p class="product-description">Transform your freelance career with 30 expertly crafted ChatGPT prompts designed to help you win more clients, create content faster, and automate daily tasks. Each prompt is tested and optimized for maximum results.</p>
+                        
+                        <div class="product-features">
+                            <h4>What's Included:</h4>
+                            <ul>
+                                <li>✅ 30 high-converting client outreach prompts</li>
+                                <li>✅ Content creation prompts for social media & blogs</li>
+                                <li>✅ Project management and task automation prompts</li>
+                                <li>✅ Pricing and negotiation conversation starters</li>
+                                <li>✅ Follow-up email templates</li>
+                                <li>✅ Bonus: 10 LinkedIn networking prompts</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="product-benefits">
+                            <h4>Benefits:</h4>
+                            <ul>
+                                <li>🚀 Save 10+ hours per week on client communication</li>
+                                <li>💰 Increase project rates by 25-50%</li>
+                                <li>📈 Book 3x more discovery calls</li>
+                                <li>⚡ Create content 5x faster</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="product-testimonial">
+                            <blockquote>"These prompts helped me land 3 new clients in my first week! The outreach templates are pure gold." - Sarah M., Freelance Designer</blockquote>
+                        </div>
+                        
+                        <div class="product-pricing">
+                            <span class="price">$29</span>
+                            <span class="price-note">One-time payment • Instant download</span>
+                        </div>
+                        
+                        <button class="cta-primary">Get Instant Access</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Grid -->
+            <div class="products-grid">
+                <div class="product-card">
+                    <h3>Midjourney Art Prompts Collection</h3>
+                    <p>50+ stunning art prompts for creating professional designs</p>
+                    <div class="price">$19</div>
+                    <button class="cta-secondary">View Details</button>
+                </div>
+                
+                <div class="product-card">
+                    <h3>Professional Resume Templates</h3>
+                    <p>ATS-friendly resume templates for modern job seekers</p>
+                    <div class="price">$15</div>
+                    <button class="cta-secondary">View Details</button>
+                </div>
+                
+                <div class="product-card">
+                    <h3>Productivity Automation Kit</h3>
+                    <p>Streamline your workflow with proven systems and templates</p>
+                    <div class="price">$25</div>
+                    <button class="cta-secondary">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Choose Your Plan</h2>
+            <p>Select the perfect plan to accelerate your success</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Free</h3>
+                    <div class="price">$0<span>/forever</span></div>
+                    <ul>
+                        <li>✅ 10 free AI prompt samples</li>
+                        <li>✅ 1 downloadable template</li>
+                        <li>✅ Basic prompt builder access</li>
+                        <li>✅ Community support</li>
+                        <li>❌ Premium prompts</li>
+                        <li>❌ Advanced templates</li>
+                    </ul>
+                    <button class="cta-secondary">Get Started Free</button>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Pro</h3>
+                    <div class="price">$9<span>/month</span></div>
+                    <ul>
+                        <li>✅ Everything in Free</li>
+                        <li>✅ Unlimited access to all prompt packs</li>
+                        <li>✅ All digital downloads & templates</li>
+                        <li>✅ Advanced prompt builder</li>
+                        <li>✅ Priority email support</li>
+                        <li>✅ Monthly new releases</li>
+                        <li>✅ Cancel anytime</li>
+                    </ul>
+                    <button class="cta-primary">Start Pro Trial</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Ultimate</h3>
+                    <div class="price">$29<span>/one-time</span></div>
+                    <ul>
+                        <li>✅ Everything in Pro</li>
+                        <li>✅ Lifetime access & updates</li>
+                        <li>✅ Exclusive bonus tools</li>
+                        <li>✅ Early access to new drops</li>
+                        <li>✅ 1-on-1 consultation call</li>
+                        <li>✅ Custom prompt requests</li>
+                        <li>✅ Commercial license</li>
+                    </ul>
+                    <button class="cta-primary">Get Lifetime Access</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>"AIProfitTools helped me increase my freelance income by 40% in just 2 months. The prompts are incredibly effective!"</p>
+                    <div class="testimonial-author">
+                        <strong>Mike Chen</strong>
+                        <span>Freelance Marketer</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"The resume templates landed me interviews at 3 Fortune 500 companies. Best investment I've made for my career."</p>
+                    <div class="testimonial-author">
+                        <strong>Jessica Rodriguez</strong>
+                        <span>Business Analyst</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"As a student, these tools help me complete projects faster and with better quality. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <strong>Alex Thompson</strong>
+                        <span>Computer Science Student</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>How quickly will I receive my purchase?</h4>
+                    <p>All digital products are delivered instantly via email after purchase. You'll get download links within 2 minutes.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do the prompts work with other AI tools besides ChatGPT?</h4>
+                    <p>Yes! Our prompts are optimized for ChatGPT but work great with Claude, Gemini, and other AI assistants.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I use these for commercial purposes?</h4>
+                    <p>Absolutely! All products include commercial usage rights for your business or client work.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What if I'm not satisfied with my purchase?</h4>
+                    <p>We offer a 30-day money-back guarantee. If you're not happy, we'll refund your purchase completely.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About AIProfitTools</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Empowering Creators with AI-Powered Success</h3>
+                    <p>At AIProfitTools, we believe that artificial intelligence should be accessible to everyone - not just tech giants. Our mission is to democratize AI tools and help creators, freelancers, and small business owners leverage cutting-edge technology to grow their success.</p>
+                    
+                    <p>Founded by a team of entrepreneurs who struggled with the same challenges you face, we understand the frustration of spending hours on tasks that could be automated or optimized. That's why we've dedicated ourselves to creating practical, proven tools that deliver real results.</p>
+                    
+                    <p>Every prompt, template, and tool in our collection has been tested in real-world scenarios. We don't just create products - we use them ourselves and share what actually works. Our community of over 10,000 users continues to inspire and guide our product development.</p>
+                    
+                    <p>Join us in the AI revolution and transform the way you work, create, and succeed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>We'd Love to Hear From You!</h3>
+                    <p>Have questions about our products? Need a custom solution? Want to share your success story? We're here to help and would love to connect with you.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <strong>Support & Inquiries:</strong>
+                            <p>Email us at <a href="mailto:raheembhaijan6@gmail.com">raheembhaijan6@gmail.com</a></p>
+                            <p>We typically respond within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h4>Send us a message</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <select id="subject" name="subject">
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Product Support</option>
+                                <option value="custom">Custom Request</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="partnership">Partnership</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AIProfitTools</h3>
+                    <p>Empowering creators with AI-powered tools and digital products.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AIProfitTools. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
